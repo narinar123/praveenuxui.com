@@ -268,6 +268,254 @@ main {
   from { transform: scale(0); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
 }
+@keyframes lbPop {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   ICON DARK / LIGHT MODE — Complete Polish
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Smooth body/theme transitions ───────────────────────── */
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.card,
+.header-area .menu-container,
+.services-item,
+.feedback-item,
+.accordion-item {
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.3s ease !important;
+}
+
+/* ── Nav icon visibility — all themes ────────────────────── */
+.header-area .navbar-info .nav-link .nav-icon {
+  transition: stroke 0.25s ease, opacity 0.25s ease;
+}
+
+/* ── Dark mode — Body/page base ──────────────────────────── */
+.dark-theme {
+  background-color: #000;
+  color: var(--dark-theme-white);
+}
+
+/* ── Dark mode — Nav icons ───────────────────────────────── */
+.dark-theme .header-area .navbar-info .nav-link .nav-icon {
+  stroke: rgba(240, 242, 245, 0.55);
+}
+.dark-theme .header-area .navbar-info .nav-link:hover .nav-icon,
+.dark-theme .header-area .navbar-info .nav-link.active .nav-icon {
+  stroke: var(--dark-theme-white);
+}
+.dark-theme .header-area .navbar-info .nav-link {
+  color: rgba(240, 242, 245, 0.65);
+}
+.dark-theme .header-area .navbar-info .nav-link:hover,
+.dark-theme .header-area .navbar-info .nav-link.active {
+  color: var(--dark-theme-white);
+  background-color: var(--dark-theme-black);
+}
+
+/* ── Dark mode — Logo icon + brand ──────────────────────── */
+.dark-theme .header-area .container .navbar-brand .logo-icon {
+  fill: var(--dark-theme-white);
+}
+.dark-theme .header-area .container .navbar-brand span {
+  color: var(--dark-theme-white);
+}
+
+/* ── Dark mode — Let's Talk button ──────────────────────── */
+.dark-theme .header-area .header-right-info .lets-talk-btn {
+  background-color: var(--primary);
+}
+.dark-theme .header-area .header-right-info .lets-talk-btn:hover {
+  background-color: #365bd9;
+}
+
+/* ── Dark mode — Mobile menu hamburger ──────────────────── */
+.dark-theme .header-area .mobile-menu-control-bar .mobile-menu-control-bar {
+  color: var(--dark-theme-white);
+}
+
+/* ── SVG icon auto-polish in dark mode ───────────────────── */
+/* Services icon images — invert for dark contrast */
+.dark-theme .services-item .image img,
+.dark-theme .expertise-item .image img:not([src*="svgl.app"]):not([src*=".png"]):not([src*=".jpg"]):not([src*=".webp"]) {
+  filter: brightness(0) invert(1) opacity(0.85);
+  transition: filter 0.3s ease;
+}
+
+/* Keep brand/colour logos intact (PNG/JPG/WEBP are usually colour) */
+.dark-theme .expertise-item .image img[src*=".png"],
+.dark-theme .expertise-item .image img[src*=".jpg"],
+.dark-theme .expertise-item .image img[src*=".webp"] {
+  filter: none !important;
+}
+
+/* Specific svgl icons that have dark-friendly versions — keep them */
+.dark-theme .expertise-item .image img[src*="svgl.app"] {
+  filter: drop-shadow(0 0 6px rgba(71, 112, 255, 0.3));
+}
+
+/* ── Work experience brand icons in dark mode ────────────── */
+.dark-theme .work-experiance-slider li .info .icon img[src*=".svg"] {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* ── Missing image placeholder ───────────────────────────── */
+img {
+  font-size: 0;
+  line-height: 0;
+}
+img::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(71,112,255,0.06) 0%, rgba(168,85,247,0.06) 100%);
+  border-radius: inherit;
+}
+img[src=""], img:not([src]) {
+  background: linear-gradient(135deg, rgba(71,112,255,0.08), rgba(168,85,247,0.08));
+  border-radius: 8px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+/* ── Dark mode card body bg ──────────────────────────────── */
+.dark-theme .card {
+  background-color: var(--dark-theme-black);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.dark-theme .card:hover {
+  box-shadow: 0 20px 60px rgba(71, 112, 255, 0.12), 0 4px 20px rgba(0,0,0,0.3) !important;
+}
+
+/* ── Dark mode — card-title text ────────────────────────── */
+.dark-theme .card-title {
+  color: var(--dark-theme-white);
+}
+
+/* ── Dark mode — p tags inside cards ────────────────────── */
+.dark-theme .card p,
+.dark-theme .card h3,
+.dark-theme .card h4,
+.dark-theme .card h5,
+.dark-theme .card h6 {
+  color: var(--dark-theme-white);
+}
+.dark-theme .card p {
+  color: var(--dark-theme-light-white);
+}
+
+/* ── Dark mode — profile card ───────────────────────────── */
+.dark-theme .profile-card .image {
+  background-image: linear-gradient(to right, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+}
+
+/* ── Dark mode — Social media icons border ───────────────── */
+.dark-theme .social-media-icon ul li a {
+  color: rgba(240, 242, 245, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .social-media-icon ul li a:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ── Dark mode — stat numbers ───────────────────────────── */
+.dark-theme .stat-number {
+  background: linear-gradient(135deg, #7b9fff, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark-theme .stat-label {
+  color: rgba(240, 242, 245, 0.55);
+}
+
+/* ── Dark mode — Copy email button ──────────────────────── */
+.dark-theme .common-button-groups .btn.btn-copy {
+  border-color: rgba(255,255,255,0.12);
+  color: var(--dark-theme-white);
+  background-color: transparent;
+}
+.dark-theme .common-button-groups .btn.btn-copy .icon {
+  stroke: var(--dark-theme-white);
+}
+.dark-theme .common-button-groups .btn.btn-copy:hover {
+  background-color: var(--dark-theme-black);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ── Dark mode — Footer ─────────────────────────────────── */
+.dark-theme .footer-area {
+  background-color: transparent;
+}
+.dark-theme .footer-area .text p {
+  color: rgba(240,242,245,0.45);
+}
+
+/* ── Dark mode — Background shapes ──────────────────────── */
+.dark-theme .background-shapes .shape-1,
+.dark-theme .background-shapes .shape-2 {
+  opacity: 0.06;
+}
+
+/* ── Light mode — Extra SVG icon polish ─────────────────── */
+.services-item .image img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.services-item:hover .image img {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* ── Theme toggle button glow ───────────────────────────── */
+.theme-control-btn span:hover {
+  background-color: rgba(71,112,255,0.08) !important;
+  border-radius: 8px;
+}
+.dark-theme .header-area .header-right-info .theme-control-btn span:hover {
+  background-color: rgba(255,255,255,0.06) !important;
+}
+
+/* ── Dark mode — back-to-top icon ───────────────────────── */
+.dark-theme #back-to-top i {
+  color: #fff;
+}
+
+/* ── Mobile nav dark mode full polish ───────────────────── */
+@media (max-width: 1199px) {
+  .dark-theme .navbar-main {
+    background-color: #0a0b0f !important;
+    border: 1px solid rgba(255,255,255,0.07);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6) !important;
+  }
+  .dark-theme .mobile-menu-overlay {
+    background-color: rgba(0,0,0,0.75) !important;
+  }
+}
+
+/* ── Responsive — ensure icons don't overflow ───────────── */
+@media (max-width: 575px) {
+  .services-item .image img,
+  .expertise-item .image img {
+    max-width: 36px;
+    max-height: 36px;
+  }
+  .stat-number {
+    font-size: 1.6rem;
+  }
+}
 .success-icon svg {
   width: 32px;
   height: 32px;

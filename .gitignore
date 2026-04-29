@@ -10,3 +10,7 @@ vendor/
 .DS_Store
 *.log
 npm-debug.log*
+modern-portfolio/
+modern-portfolio-fullstack/
+logs/
+scratch/

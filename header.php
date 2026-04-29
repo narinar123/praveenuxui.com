@@ -19,19 +19,22 @@
   <title>Praveen Kumar K — Senior UX/UI Architect · AI Agentic & Generative Design Expert</title>
   <meta name="description" content="Praveen Kumar K — 18+ years of UX/UI Architecture, AI Agentic Design, Generative AI UX Strategy, Human-Computer Interaction and Product Design across 14+ countries worldwide.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Theme colors for browser chrome -->
+  <meta name="theme-color" content="#F0F2F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1018" media="(prefers-color-scheme: dark)">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Praveen Kumar K — Senior UX/UI Architect · AI Agentic Design Expert">
   <meta property="og:description" content="18+ years of UX/UI Architecture, AI Agentic Design, Generative AI UX Strategy across 14+ countries worldwide.">
-  <meta property="og:image" content="assets/img/images/profile.png">
-  <meta property="og:url" content="https://www.pranuuxui.com/">
+  <meta property="og:image" content="https://www.praveenuxui.com/assets/img/images/profile.png">
+  <meta property="og:url" content="https://www.praveenuxui.com/">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Praveen Kumar K — Senior UX/UI Architect">
   <meta name="twitter:description" content="18+ years of UX/UI, AI Agentic Design &amp; Generative AI UX Strategy across 14+ countries.">
-  <meta name="twitter:image" content="assets/img/images/profile.png">
+  <meta name="twitter:image" content="https://www.praveenuxui.com/assets/img/images/profile.png">
   <!-- Canonical -->
-  <link rel="canonical" href="https://www.pranuuxui.com/">
+  <link rel="canonical" href="https://www.praveenuxui.com/">
 
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg">
   <!-- Place favicon.ico in the root directory -->
@@ -55,8 +58,8 @@
     "name": "Praveen Kumar K",
     "jobTitle": "Senior UX/UI Architect & AI Agentic Design Strategist",
     "description": "18+ years of UX/UI Architecture, AI Agentic Design, Generative AI UX Strategy across 14+ countries",
-    "url": "https://www.pranuuxui.com/",
-    "image": "https://www.pranuuxui.com/assets/img/images/profile.png",
+    "url": "https://www.praveenuxui.com/",
+    "image": "https://www.praveenuxui.com/assets/img/images/profile.png",
     "email": "praveenkumar.kanneganti@gmail.com",
     "sameAs": [
       "https://www.linkedin.com/in/praveenkumarkanneganti/",
