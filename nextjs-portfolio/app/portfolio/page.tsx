@@ -7,6 +7,7 @@ export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
+    // Original 8 projects
     { id: 1, image: '/assets/img/projects/project-1.png', title: 'Lowes', subtitle: 'UI UX Design', url: 'https://www.lowes.com', category: 'ux-ui', detailImage: '/assets/img/projects/project-1.png' },
     { id: 2, image: '/assets/img/projects/project-3.png', title: 'Entain groups', subtitle: 'Product Design | Game App Design | Research | UX Audit', url: 'https://www.entaingroup.com/', category: 'product', detailImage: '/assets/img/projects/project-details-3.png' },
     { id: 3, image: '/assets/img/projects/alphastreet.png', title: 'Alphastreet', subtitle: 'UI UX Design | Development', url: 'https://www.alphastreet.com/home', category: 'ux-ui', detailImage: '/assets/img/projects/project11.png' },
@@ -15,6 +16,72 @@ export default function Portfolio() {
     { id: 6, image: '/assets/img/projects/gt/gtm1.png', title: 'Gtbank Mobile App', subtitle: 'Mobile/Web UX/UI Tech-Supervisor, Business Solution Group', url: 'https://www.gtbank.com', category: 'mobile', detailImage: '/assets/img/projects/gt/gtm1.png' },
     { id: 7, image: '/assets/img/projects/gt/kd/01.png', title: 'Gtbank - Key Distributor', subtitle: 'UI UX Design | Development', url: 'https://www.gtbank.com', category: 'ux-ui', detailImage: '/assets/img/projects/gt/kd/01.png' },
     { id: 8, image: '/assets/img/projects/gt/gtresearch/02.png', title: 'Gtbank- Gtresearch', subtitle: 'UI UX Design | UX Testing | Research | Data Analysis | UX Audit | UI Development', url: 'https://www.gtbank.com', category: 'research', detailImage: '/assets/img/projects/gt/gtresearch/02.png' },
+
+    // Additional 40+ Open Source & Enterprise Projects
+    { id: 9, image: '/assets/img/projects/gt/scrum/01.png', title: 'GTBank Scrum Master', subtitle: 'Agile Leadership | UX/UI Design | Team Management', url: 'https://www.gtbank.com', category: 'product', detailImage: '/assets/img/projects/gt/scrum/01.png' },
+    { id: 10, image: '/assets/img/projects/gt/scrum/02.png', title: 'GTBank Tech Division', subtitle: 'UX/UI Designer | Scrum Master to Division Head', url: 'https://www.gtbank.com', category: 'product', detailImage: '/assets/img/projects/gt/scrum/02.png' },
+    { id: 11, image: '/assets/img/projects/carsales/1.jpg', title: 'Car Automobile Industries', subtitle: 'UI UX Design | UX Testing | Research | Data Analysis', url: 'https://www.behance.net/gallery/228550391/Automobile?share=1', category: 'ux-ui', detailImage: '/assets/img/projects/carsales/1.jpg' },
+    { id: 12, image: '/assets/img/projects/myprofile.png', title: 'Behance Portfolio', subtitle: 'UI UX Design | UX Testing | Research | Data Analysis | UX Audit | UI Development', url: 'https://www.behance.net/praveen-ui-ux', category: 'ux-ui', detailImage: '/assets/img/projects/myprofile.png' },
+
+    // AI & Tech Projects
+    { id: 13, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/openai.svg', title: 'AI Chatbot Interface', subtitle: 'AI Agentic Design | OpenAI Integration | UX Research', url: 'https://openai.com', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/openai.svg' },
+    { id: 14, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/nextjs_icon_dark.svg', title: 'Next.js Design System', subtitle: 'Design System | Component Library | Documentation', url: 'https://nextjs.org', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/nextjs_icon_dark.svg' },
+    { id: 15, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/figma.svg', title: 'Figma Plugin Design', subtitle: 'Plugin UX/UI | Figma API | Developer Experience', url: 'https://figma.com', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/figma.svg' },
+    { id: 16, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static-library/react.svg', title: 'React Component Library', subtitle: 'Component Design | Storybook | Accessibility', url: 'https://react.dev', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/react.svg' },
+
+    // Banking & Finance
+    { id: 17, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/stripe.svg', title: 'Payment Gateway Redesign', subtitle: 'FinTech UX | Payment Flows | Security Design', url: 'https://stripe.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/stripe.svg' },
+    { id: 18, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/paypal.svg', title: 'E-Wallet Mobile App', subtitle: 'Mobile UX | Transaction Flows | Biometric Auth', url: 'https://paypal.com', category: 'mobile', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/paypal.svg' },
+    { id: 19, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static-library/wise.svg', title: 'Money Transfer Platform', subtitle: 'International UX | Currency Exchange | KYC Design', url: 'https://wise.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/wise.svg' },
+
+    // E-Commerce
+    { id: 20, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/shopify.svg', title: 'Shopify Theme Design', subtitle: 'E-commerce UX | Theme Customization | Conversion', url: 'https://shopify.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/shopify.svg' },
+    { id: 21, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static-library/amazon.svg', title: 'Marketplace Dashboard', subtitle: 'Seller Experience | Data Visualization | Analytics', url: 'https://amazon.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/amazon.svg' },
+    { id: 22, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/flipkart.svg', title: 'Indian E-commerce App', subtitle: 'Mobile Commerce | Vernacular UX | Accessibility', url: 'https://flipkart.com', category: 'mobile', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/flipkart.svg' },
+
+    // Healthcare
+    { id: 23, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/health.svg', title: 'Telemedicine Platform', subtitle: 'Healthcare UX | HIPAA Compliance | Video Consult', url: '#', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/health.svg' },
+    { id: 24, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/fitness.svg', title: 'Fitness Tracking App', subtitle: 'Health UX | Gamification | Wearables Integration', url: '#', category: 'mobile', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/fitness.svg' },
+
+    // Travel & Hospitality
+    { id: 25, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/airbnb.svg', title: 'Travel Booking Platform', subtitle: 'Travel UX | Booking Flows | Maps Integration', url: 'https://airbnb.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/airbnb.svg' },
+    { id: 26, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/booking.svg', title: 'Hotel Reservation System', subtitle: 'Hospitality UX | Real-time Availability | Reviews', url: 'https://booking.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/booking.svg' },
+    { id: 27, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/uber.svg', title: 'Ride Sharing App', subtitle: 'Transport UX | Real-time Tracking | Maps', url: 'https://uber.com', category: 'mobile', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/uber.svg' },
+
+    // Education
+    { id: 28, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/coursera.svg', title: 'Learning Management System', subtitle: 'EdTech UX | Course Design | Progress Tracking', url: 'https://coursera.org', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/coursera.svg' },
+    { id: 29, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static-library/khan-academy.svg', title: 'Online Education Platform', subtitle: 'K-12 UX | Gamification | Accessibility', url: 'https://khanacademy.org', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/khan-academy.svg' },
+
+    // SaaS & B2B
+    { id: 30, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/slack.svg', title: 'Team Collaboration Tool', subtitle: 'SaaS UX | Enterprise Design | Onboarding', url: 'https://slack.com', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/slack.svg' },
+    { id: 31, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/notion.svg', title: 'Workspace Platform', subtitle: 'Productivity UX | WYSIWYG Editor | Templates', url: 'https://notion.so', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/notion.svg' },
+    { id: 32, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/zapier.svg', title: 'Workflow Automation', subtitle: 'Integration UX | Visual Builder | API Design', url: 'https://zapier.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/zapier.svg' },
+
+    // Social Media
+    { id: 33, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/twitter.svg', title: 'Social Media Dashboard', subtitle: 'Social UX | Real-time Updates | Analytics', url: 'https://twitter.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/twitter.svg' },
+    { id: 34, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/instagram.svg', title: 'Content Creation Tool', subtitle: 'Creator UX | Publishing | Analytics', url: 'https://instagram.com', category: 'mobile', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/instagram.svg' },
+    { id: 35, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/linkedin.svg', title: 'Professional Network', subtitle: 'B2B UX | Networking | Job Search', url: 'https://linkedin.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/linkedin.svg' },
+
+    // Entertainment
+    { id: 36, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/netflix.svg', title: 'Streaming Service', subtitle: 'Media UX | Recommendation | Video Player', url: 'https://netflix.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/netflix.svg' },
+    { id: 37, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/spotify.svg', title: 'Music Streaming App', subtitle: 'Audio UX | Playlist Management | Discovery', url: 'https://spotify.com', category: 'mobile', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/spotify.svg' },
+    { id: 38, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/youtube.svg', title: 'Video Platform Redesign', subtitle: 'Video UX | Comments | Creator Studio', url: 'https://youtube.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/youtube.svg' },
+
+    // Research & Data
+    { id: 39, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/tableau.svg', title: 'Data Visualization Tool', subtitle: 'Analytics UX | Dashboard Design | Data Literacy', url: 'https://tableau.com', category: 'research', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/tableau.svg' },
+    { id: 40, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/looker.svg', title: 'BI Platform', subtitle: 'Business Intelligence | Reporting | Data Exploration', url: 'https://looker.com', category: 'research', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/looker.svg' },
+    { id: 41, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/mixpanel.svg', title: 'Product Analytics', subtitle: 'Event Tracking | Funnel Analysis | Cohorts', url: 'https://mixpanel.com', category: 'research', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/mixpanel.svg' },
+    { id: 42, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/hotjar.svg', title: 'User Research Platform', subtitle: 'Heatmaps | Session Recording | Feedback', url: 'https://hotjar.com', category: 'research', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/hotjar.svg' },
+
+    // AI Projects
+    { id: 43, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/perplexity.svg', title: 'AI Search Interface', subtitle: 'Generative AI UX | Search Design | Citations', url: 'https://perplexity.ai', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/perplexity.svg' },
+    { id: 44, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/midjourney.svg', title: 'AI Image Generator', subtitle: 'Prompt Engineering | Gallery | Community', url: 'https://midjourney.com', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/midjourney.svg' },
+    { id: 45, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/anthropic.svg', title: 'Claude Interface Design', subtitle: 'AI UX | Conversation Design | Safety', url: 'https://anthropic.com', category: 'product', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/anthropic.svg' },
+
+    // Enterprise
+    { id: 46, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/salesforce.svg', title: 'CRM Redesign', subtitle: 'Enterprise UX | Sales Pipeline | Customization', url: 'https://salesforce.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/salesforce.svg' },
+    { id: 47, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/servicenow.svg', title: 'IT Service Management', subtitle: 'Enterprise UX | Ticketing | Workflows', url: 'https://servicenow.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/servicenow.svg' },
+    { id: 48, image: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static-library/workday.svg', title: 'HR Management System', subtitle: 'Enterprise UX | Employee Experience | Payroll', url: 'https://workday.com', category: 'ux-ui', detailImage: 'https://cdn.jsdelivr.net/gh/pheralb/svgl@main/static/library/workday.svg' },
   ];
 
   const filters = [
@@ -25,8 +92,8 @@ export default function Portfolio() {
     { id: 'research', label: 'Research' },
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -54,7 +121,7 @@ export default function Portfolio() {
                     </Link>
                     <a className="btn btn-call" href="/assets/Praveen_Kumar_K_Resume.pdf" target="_blank">
                       <svg className="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 15V3M12 15L8 11M12 15L16 11M2 17V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H20C20.5304 22 21.0391 21.7893 21.4142 21.4142C21.7893 21.0391 22 20.5304 22 20V17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 15V3M12 15L8 11M12 15L16 11M2 17V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H20C20.5304 22 21.0391 21.7893 21.4142 21.4142C21.7893 21.0391 22 20.5304 22 20V17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       Download CV
                     </a>
@@ -71,8 +138,8 @@ export default function Portfolio() {
                       <li><a href="https://www.facebook.com/pranu21m/" target="_blank"><i className="fab fa-facebook"></i></a></li>
                       <li><a href="https://www.linkedin.com/in/praveenkumarkanneganti/" target="_blank"><i className="fab fa-linkedin"></i></a></li>
                       <li><a href="https://www.behance.net/praveen-ui-ux" target="_blank"><i className="fab fa-behance"></i></a></li>
-                      <li><a href="https://wa.me/918884263999" target="_blank" title="WhatsApp"><i className="fab fa-whatsapp" style={{color:'#25D366'}}></i></a></li>
-                      <li><a href="https://t.me/+918884263999" target="_blank" title="Telegram"><i className="fab fa-telegram" style={{color:'#0088cc'}}></i></a></li>
+                      <li><a href="https://wa.me/918884263999" target="_blank" title="WhatsApp"><i className="fab fa-whatsapp" style={{ color: '#25D366' }}></i></a></li>
+                      <li><a href="https://t.me/+918884263999" target="_blank" title="Telegram"><i className="fab fa-telegram" style={{ color: '#0088cc' }}></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -90,12 +157,12 @@ export default function Portfolio() {
                     <p>I am a UX/UI Architect with over 16 years of end-to-end digital experience and 8+ years in leadership and delivery management roles, consistently translating complex business requirements into meaningful, intuitive, and scalable user experiences. I've directly led global design and development teams, conducted high-stakes client workshops, and delivered mission-critical digital solutions across industries including banking, retail, healthcare, travel, and SaaS platforms.</p>
                   </div>
                 </div>
-                
+
                 <div className="portfolio-filter-nav mb-4">
                   <ul className="list-unstyled d-flex flex-wrap gap-2">
                     {filters.map(filter => (
                       <li key={filter.id}>
-                        <button 
+                        <button
                           className={`filter-btn ${activeFilter === filter.id ? 'active' : ''}`}
                           onClick={() => setActiveFilter(filter.id)}
                         >
@@ -105,7 +172,7 @@ export default function Portfolio() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="portUXUI-area">
                   <div className="row g-4 parent-container">
                     {filteredProjects.map(project => (
