@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/mail.php
+Disallow: /scratch/
+
+Sitemap: https://www.pranuuxui.com/sitemap.xml
